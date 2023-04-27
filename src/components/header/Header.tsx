@@ -18,14 +18,8 @@ const Header = () => {
         {/* website logo */}
 
         <Link href="/">
-          <Image
-            className="h-[26px] lg:h-[32px]"
-            width={153}
-            height={26}
-            priority
-            src="/images/logo/logo.png"
-            alt="logo"
-          />
+          <h1 className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text text-7xl italic">
+            Punith</h1>
         </Link>
         {/* start mobile menu toggle and mode btn */}
         <div className="flex items-center">
