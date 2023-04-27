@@ -2,12 +2,14 @@ import Image from "next/image";
 
 import Social from "../social/Social";
 import Info from "./Info";
+import {AiOutlineDownload} from 'react-icons/ai'
+
 
 const SidebarInfo = () => {
   return (
     <div className="w-full mb-6 lg:mb-0 mx-auto relative bg-white text-center dark:bg-[#111111] px-6 rounded-[20px] mt-[180px] md:mt-[220px] lg:mt-0 ">
       <Image
-        src="/images/about/avatar.jpg"
+        src="/images/about/avatar-me.jpg"
         width={240}
         height={240}
         className="w-[240px] absolute left-[50%] transform -translate-x-[50%] h-[240px] drop-shadow-xl mx-auto  rounded-[20px] -mt-[140px]"
@@ -38,7 +40,8 @@ const SidebarInfo = () => {
           download
           className="inline-flex items-center mx-auto bg-gradient-to-r from-[#FA5252] to-[#DD2476] duration-200 transition ease-linear hover:bg-gradient-to-l from-[#DD2476]  to-[#fa5252ef] px-8 py-3 text-lg text-white rounded-[35px] mt-6"
         >
-          <img src="/images/download.png" alt="icon" className="mr-2" />
+          {/* <img src="/images/download.png" alt="icon" className="mr-2" /> */}
+          <AiOutlineDownload className="mr-2"/>
           Download CV
         </a>
       </div>

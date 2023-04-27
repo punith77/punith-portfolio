@@ -7,7 +7,7 @@ const Seo = ({ pageTitle }: SeoProps) => (
     <Head>
       <title>
         {pageTitle &&
-          `${pageTitle} || Bostami - Tailwind CSS  Personal Portfolio React Nextjs Template}`}
+          `${pageTitle} || Punith Chirumamilla Personal Portfolio}`}
       </title>
     </Head>
   </>

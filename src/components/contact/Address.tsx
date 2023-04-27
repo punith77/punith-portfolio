@@ -7,7 +7,7 @@ const Address = () => {
 
   return (
     <>
-      {addressData.map((item, i) => (
+      {addressData.map((item: any, i: number) => (
         <div
           key={i}
           style={{
