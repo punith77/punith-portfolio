@@ -1,7 +1,7 @@
 import { MdOutlineBusinessCenter, MdOutlineSchool } from "react-icons/md";
 import { FaAward } from "react-icons/fa";
 
-module.exports = [
+export const resumeData = [
   {
     id: 1,
     title: "Education",
@@ -9,17 +9,17 @@ module.exports = [
     items: [
       {
         id: 1,
-        date: "2021-2023",
-        title: "Ph.D in Horriblensess ",
-        place: "ABC University, Los Angeles, CA",
+        date: "2014-2015",
+        title: "Post Graduate in Information Technology",
+        place: "Lambton College, Sarnia",
         bg: "#FFF4F4",
       },
 
       {
         id: 2,
-        date: "2019 - Present",
-        title: "Sr. Software Tester",
-        place: "Google Inc.",
+        date: "2009-2013",
+        title: "Bachelors in Technology",
+        place: "SRM University",
         bg: "#FFF1FB",
       },
 

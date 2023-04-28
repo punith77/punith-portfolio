@@ -1,6 +1,6 @@
 import { useTheme } from "next-themes";
 import Image from "next/image";
-import addressData from "../../data/addressData";
+import {addressData} from "../../data/addressData";
 
 const Address = () => {
   const { theme, setTheme } = useTheme();
@@ -15,14 +15,8 @@ const Address = () => {
           }}
           className="flex flex-wrap p-[30px]  border-[#A6A6A6] gap-2 rounded-xl "
         >
-          <span className="w-8 mt-2">
-            <Image
-              src={item.icon}
-              width={30}
-              height={20}
-              alt="icon"
-              className="text-4xl dark:text-white"
-            />
+          <span className="w-8 mt-1">
+            {item.icon}
           </span>
           <div className="space-y-2">
             <p className="text-xl font-semibold dark:text-white">
