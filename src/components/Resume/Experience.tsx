@@ -1,98 +1,67 @@
-import React, {useState} from 'react'
-import Masonry from "react-masonry-css";
-import { useTheme } from "next-themes";
+import React, { useState } from "react";
+import { FiMoreHorizontal } from "react-icons/fi";
 
-const  data = [
-  {
-    id: "1",
-    company: "Sillicon Valley Bank",
-    period: "May 2022 - Mar 2023",
-    location: "remote",
-    bg: "#FFF4F4",
-  },
-  {
-    id: "2",
-    company: "ATB Financial",
-    period: "May 2022 - Mar 2023",
-    location: "remote",
-    bg: "#FFF1FB",
-  },
-  {
-    id: "3",
-    company: "Motorolla Solutions",
-    period: "May 2022 - Mar 2023",
-    location: "remote",
-    bg: "#FFF4F4",
-  },
-  {
-    id: "4",
-    company: "Vog App Developers",
-    period: "May 2022 - Mar 2023",
-    location: "remote",
-    bg: "#FFF1FB",
-  },
+import { experienceData } from "../../data/experience";
 
-  {
-    id: "5",
-    company: "Shaw Communications",
-    period: "May 2022 - Mar 2023",
-    location: "remote",
-    bg: "#FFF4F4",
-  }
-]
-
-export default function Education() {
-    const breakpointColumnsObj = {
-        default: 2,
-        1100: 2,
-        500: 1,
-      };
-
-  const { theme, setTheme } = useTheme();
-
-
-//   const handlePortfolioData = (id: any) => {
-//     // const find = portfolioData.find((item) => item?.id === id);
-//     // setSingleData(find);
-//     // setIsOpen(true);
-//   };
-  const handleModle = (id: any) => {
-    // handlePortfolioData(id);
-  };
-
-    return  (
-        <Masonry
-        breakpointCols={breakpointColumnsObj}
-        className="my-masonry-grid"
-        columnClassName="my-masonry-grid_column"
-      >
-        {data.map((item) => (
-          <div
-            className="rounded-lg p-6 dark:border-[2px] border-[#212425]"
-            style={{
-              background: `${theme === "dark" ? "transparent" : item?.bg}`,
-            }}
-            key={item.id}
-            onClick={() => handleModle(item?.id)}
-          >
-            <div className="overflow-hidden rounded-lg">
-              {/* <Image
-                className="w-full    cursor-pointer transition duration-200 ease-in-out transform hover:scale-110 rounded-lg h-auto "
-                src={item.imgSmall}
-                width={300}
-                height={300}
-                priority
-                alt="portfolio Image"
-              /> */}
-            </div>
-            <span className="pt-5 text-[14px] font-normal text-gray-lite block dark:text-[#A6A6A6]">
-              {item.company}
-            </span>
-            <h2 className="font-medium cursor-pointer text-xl duration-300 transition hover:text-[#FA5252] dark:hover:text-[#FA5252] dark:text-white mt-2">
-              {item.period}
-            </h2>
-          </div>
-        ))}
-      </Masonry>
-    )
+export default function Experience() {
+  return (
+    <>
+      <ol className="relative border-l border-gray-200 dark:border-gray-700">
+        {experienceData.map((e, i) => {
+          return (
+            <li className="mb-10 ml-10" key={i}>
+              <span className="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -left-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+                <svg
+                  aria-hidden="true"
+                  className="w-3 h-3 text-[#FA5252]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </span>
+              <h3 className="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">
+                {`${e.role} at ${e.company}`}
+                {
+                  e.current && (
+                    <span className="bg-blue-100 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300 ml-3">
+                    Latest
+                  </span>
+                  )
+                }
+              
+              </h3>
+              <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+                {e.period}
+              </time>
+              <p className="mb-4 text-base font-light text-gray-500 dark:text-gray-400 italic">{e.description}</p>
+              <div className="mb-4">
+                {e.stack.map((s, j) => {
+                  return (
+                    <span key={j} className="mr-2">
+                      <button className="resume-btn text-[15px]" key={i}>
+                        {s.icon}
+                      </button>
+                    </span>
+                  );
+                })}
+              </div>
+              {/* to do modal to show employement details */}
+              {/* <button className="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-[#FA5252] to-[#DD2476] group-hover:from-[#FA5252] to-[#DD2476] hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800">
+                <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-[#212425] rounded-md group-hover:bg-opacity-0 inline-flex items-start">
+                  Show Details
+                  <FiMoreHorizontal className="text-5xl ml-1" />
+                </span>
+              </button> */}
+            </li>
+          );
+        })}
+      </ol>
+    </>
+  );
 }
