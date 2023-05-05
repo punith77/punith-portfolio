@@ -4,7 +4,7 @@ import { CgNotes } from "react-icons/cg";
 import { FiCodesandbox } from "react-icons/fi";
 import { RiContactsBookLine } from "react-icons/ri";
 
-module.exports = [
+const headerMenu = [
   {
     id: 1,
     name: "Home",
@@ -36,3 +36,5 @@ module.exports = [
     icon: <RiContactsBookLine />,
   },
 ];
+
+export default headerMenu

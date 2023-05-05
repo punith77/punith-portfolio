@@ -37,7 +37,7 @@ const index = () => {
                   </div>
                   {/* End contact address block */}
 
-                  <ContactForm />
+                  <ContactForm condition={true}/>
                   {/* End contact form */}
                 </div>
               </div>

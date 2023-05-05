@@ -7,31 +7,31 @@ const LineItem = ({ item }: any) => {
       id: 1,
       color: "#FF6464",
       name: "Backend Apis",
-      number: "90",
+      number: 90,
     },
     {
       id: 2,
       color: "#6AB5B9",
       name: "Microservices",
-      number: "75",
+      number: 75,
     },
     {
       id: 3,
       color: "#9272D4",
       name: "Frontend Development",
-      number: "95",
+      number: 95,
     },
     {
       id: 4,
       color: "#5185D4",
       name: "Mobile App",
-      number: "65",
+      number: 65,
     },
     {
       id: 5,
       color: "#CA56F2",
       name: "Cloud Development",
-      number: "75",
+      number: 75,
     },
   ];
 

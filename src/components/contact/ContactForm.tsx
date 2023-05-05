@@ -7,45 +7,45 @@ interface CommonContactProps {
 condition : boolean
 }
 const CommonContact = ({ condition }: CommonContactProps) => {
-  const form = useRef();
+  const form = useRef({current: ''});
 
   // use Email js for recive message
 
   const sendEmail = (e: any) => {
     e.preventDefault();
-    emailjs
-      .sendForm(
-        "service_n4mkhz9",
-        "template_ugoztxr",
-        form.current,
-        "user_vYmDSd9PwIuRXUQEDjYwN"
-      )
-      .then(
-        (result: any) => {
-          console.log(result);
-          toast.success("Message Sent successfully!", {
-            position: "top-right",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-          });
-          document.getElementById("myForm").reset();
-        },
-        (error: any) => {
-          toast.error("Ops Message not Sent!", {
-            position: "top-right",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-          });
-        }
-      );
+    // emailjs
+    //   .sendForm(
+    //     "service_n4mkhz9",
+    //     "template_ugoztxr",
+    //     form.current,
+    //     "user_vYmDSd9PwIuRXUQEDjYwN"
+    //   )
+    //   .then(
+    //     (result: any) => {
+    //       console.log(result);
+    //       toast.success("Message Sent successfully!", {
+    //         position: "top-right",
+    //         autoClose: 5000,
+    //         hideProgressBar: false,
+    //         closeOnClick: true,
+    //         pauseOnHover: true,
+    //         draggable: true,
+    //         progress: undefined,
+    //       });
+    //       document.getElementById("myForm")?.onreset();
+    //     },
+    //     (error: any) => {
+    //       toast.error("Ops Message not Sent!", {
+    //         position: "top-right",
+    //         autoClose: 5000,
+    //         hideProgressBar: false,
+    //         closeOnClick: true,
+    //         pauseOnHover: true,
+    //         draggable: true,
+    //         progress: undefined,
+    //       });
+    //     }
+    //   );
   };
 
   return (
@@ -67,7 +67,7 @@ const CommonContact = ({ condition }: CommonContactProps) => {
       </h3>
 
       {/* Form Start */}
-      <form id="myForm" ref={form} onSubmit={sendEmail}>
+      <form id="myForm" onSubmit={sendEmail}>
         <div className="relative z-0 w-full mt-[40px] mb-8 group">
           <input
             type="text"

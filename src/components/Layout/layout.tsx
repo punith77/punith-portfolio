@@ -1,11 +1,11 @@
 // import { Head } from "next/document"
 
 import Head from "next/head"
-import Navbar from "../Navbar/navbar"
+// import Navbar from "../Navbar/navbar"
 import { ThemeProvider, createTheme } from "@mui/material"
 import { green, purple } from '@mui/material/colors';
 import { getThemePalette } from "@/themes/themeMain";
-import Home from '../Home/home'
+// import Home from '../Home/home'
 
 interface LayoutProps {
     children: React.ReactNode
@@ -34,7 +34,7 @@ return (
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <ThemeProvider theme={theme}>
-      <Navbar />
+      {/* <Navbar /> */}
        {children}
       </ThemeProvider>
    
