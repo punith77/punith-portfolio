@@ -1,12 +1,12 @@
-import {TbBrandGolang, TbBrandReactNative} from 'react-icons/tb'
+import {TbBrandReactNative} from 'react-icons/tb'
 import {FaNodeJs, FaReact} from 'react-icons/fa'
 import {AiOutlineCloudServer} from 'react-icons/ai'
-import {SiTerraform} from 'react-icons/si'
+import {SiTerraform, SiPython} from 'react-icons/si'
 export const servicesData = [
   {
     id: "1",
-    icon: <TbBrandGolang className='text-7xl'/>,
-    title: <span>Backed Development in <span className="whitespace-nowrap">Golang</span></span>,
+    icon: <SiPython className='text-7xl'/>,
+    title: <span>Backed Development in <span className="whitespace-nowrap">Python</span></span>,
     des: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod volutpat.",
     color: "#D566FF",
     bg: "#FCF4FF",

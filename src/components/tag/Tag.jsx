@@ -1,6 +1,6 @@
 const Tag = () => {
   const tagList = [
-    "Golang",
+    "Python",
     "Node JS",
     "Typescript",
     "React",

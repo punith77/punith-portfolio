@@ -12,7 +12,7 @@ const Intro = () => {
               I am an allround web developer. I am a senior programmer with good knowledge of front-end and back-end techniques. I love structure and order and I also stand for quality. I love spending time on fixing little details and optimizing web apps. 
               </p>
               <p className="text-gray-lite leading-7 mt-2.5 dark:text-color-910">
-              Also I like working in a team, you&apos;ll learn faster and much more. Currently Golang is very close to my heart but I still wasn&apos;t happy with my fluency. So I&apos;m learning the system well to have that sense of accomplishment early on in my next role.
+              Also I like working in a team, you&apos;ll learn faster and much more. Currently Python and Typescript are very close to my heart. Developing few side projects to learn more advanced applications using Fast api and React.
               </p>
             </div>
           </div>
