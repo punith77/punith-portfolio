@@ -1,6 +1,6 @@
 import { useTheme } from "next-themes";
 import Image from "next/image";
-import {servicesData} from "../../data/serviceData";
+import { servicesData } from "../../data/serviceData";
 
 const Service = () => {
   const { theme, setTheme } = useTheme();
@@ -15,13 +15,13 @@ const Service = () => {
             background: `${theme === "dark" ? "transparent" : item?.bg}`,
           }}
         >
-      {item.icon}
+          {item.icon}
 
           <div className="space-y-2 break-all">
             <h3 className="dark:text-white text-xl font-semibold">
               {item?.title}
             </h3>
-            <p className=" leading-8 text-gray-lite dark:text-[#A6A6A6]">
+            <p className=" leading-8 break-keep text-gray-lite dark:text-[#A6A6A6]">
               {item?.des}
             </p>
           </div>
