@@ -31,7 +31,7 @@ export const experienceData = [
     role: "Full stack developer",
     current: true,
     description:
-      "Developed Applications for Bank employees to server ATB Customers with their day to day banking. Developed apis using Java spring boot, Express with Typescript and Python",
+      "Developed Applications for Bank employees to server ATB Customers with their day to day banking. Developed apis using Java spring boot, Express with Typescript and Java Spring Boot",
     stack: [
       {
         name: "NodeJs with typescript using Loopback",
@@ -177,7 +177,8 @@ export const experienceData = [
     location: "remote",
     current: false,
     role: "Software Developer",
-    description: "Developed internal application to integrate order management and processing order",
+    description:
+      "Developed internal application to integrate order management and processing order",
     stack: [
       {
         name: "NodeJs with typescript using Loopback",

@@ -1,17 +1,17 @@
 import { TbBrandReactNative } from "react-icons/tb";
 import { FaNodeJs, FaReact } from "react-icons/fa";
 import { AiOutlineCloudServer } from "react-icons/ai";
-import { SiTerraform, SiPython } from "react-icons/si";
+import { SiTerraform, SiGo } from "react-icons/si";
 export const servicesData = [
   {
     id: "1",
-    icon: <SiPython className="text-7xl" />,
+    icon: <SiGo className="text-7xl" />,
     title: (
       <span>
-        Backed Development in <span className="whitespace-nowrap">Python</span>
+        Backed Development in <span className="whitespace-nowrap">Golang</span>
       </span>
     ),
-    des: "Design and developed REST api's using Fastapi",
+    des: "Design and developed REST api's using Golang",
     color: "#D566FF",
     bg: "#FCF4FF",
   },
